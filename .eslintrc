@@ -58,10 +58,10 @@
           },
           "while": {
             "after": false
-          },
-          "catch": {
-            "after": false
           }
+          // "catch": {
+          //   "after": false
+          // }
         }
       }
     ],

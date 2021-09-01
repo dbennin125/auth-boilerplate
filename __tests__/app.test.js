@@ -26,7 +26,6 @@ describe('auth routes', () => {
       .then((res) => {
         user = res.body;
       });
-
     //async and await syntax
     // await setup(pool);
 
@@ -47,6 +46,7 @@ describe('auth routes', () => {
   });
 
   it('allows a user to signup via POST', async () => {
+    // return request(app)
     return request(app)
       .post('/api/v1/auth/signup')
       .send({
@@ -90,7 +90,10 @@ describe('auth routes', () => {
 
   it('verifies a user via GET', async () => {
     return agent.get('/api/v1/auth/verify').then((res) => {
-      expect(res.body.user).toEqual({
+      // console.log('res.body', res.body);
+      // console.log('user', user);
+      // console.log('verify test', res.body);
+      expect(res.body).toEqual({
         ...user,
       });
     });
